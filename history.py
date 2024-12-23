@@ -13,12 +13,12 @@ from google.cloud import aiplatform
 import os
 REGION = "us-central1"
 PROJECT_ID = "test123-443617"
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\BharathAmudala\Downloads\claude_service_account.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r""
 aiplatform.init(project=PROJECT_ID, location=REGION)
 
 # Environment setup
-# os.environ["GOOGLE_API_KEY"] = "AIzaSyDPg2cEFMwOoJLZESbfVslh_QGostOLWEU"
-os.environ["PINECONE_API_KEY"] = "pcsk_6na1Gv_A2prpH33YPQfdkDSUh8bYgn392KiWZao8WrQKL8Xsgm2tQqAm6RsNtf8gXxtV2j"
+# os.environ["GOOGLE_API_KEY"] = ""
+os.environ["PINECONE_API_KEY"] = ""
 
 # Initialize Pinecone and LangChain Embeddings
 pc = Pinecone(api_key=os.environ.get("PINECONE_API_KEY"))
